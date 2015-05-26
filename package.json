@@ -1,0 +1,13 @@
+{
+  "name": "node-env",
+  "description": "Wrapper of `nconf` to support `location` of `.env`",
+  "version": "1.0.0",
+  "author": "Ryan Johnston <ryan@mediapixel.co.nz>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Firetrust/node-env.git"
+  },
+  "dependencies": {
+    "nconf": "^0.7.1"
+  }
+}
