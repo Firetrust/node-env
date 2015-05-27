@@ -3,6 +3,7 @@
  */
 
 var nconf = require('nconf');
+var path = require('path');
 
 /**
  * Expose `env`.
@@ -11,23 +12,11 @@ var nconf = require('nconf');
 module.exports = nconf;
 
 /**
- * `.env` location path.
- *
- * @type {String}
- */
-
-var path = null;
-
-/**
  * Extend `nconf` with location.
  *
  * @api public
  */
 
-nconf.location = function location(p) {
-  if (path) return path;
-
-  path = p || '.';
-
-  this.file({file: path + '/.env'});
+nconf.location = function location(location) {
+  this.file({file: path.resolve(location, '.env')});
 };
